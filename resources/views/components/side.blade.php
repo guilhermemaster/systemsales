@@ -22,8 +22,8 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/employee">Cadastrar Funcionario</a></li>
-                  <li><a class="dropdown-item" href="/products/registration">Cadastrar Produto</a></li>
-                  <li><a class="dropdown-item" href="#">Vender</a></li>
+                  <li><a class="dropdown-item" href="/products">Cadastrar Produto</a></li>
+                  <li><a class="dropdown-item" href="/client">Cadastrar Cliente</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="/login">Sair</a></li>
                   

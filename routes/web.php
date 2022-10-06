@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginService;
 use App\Http\Controllers\SystemSales;
 use App\Http\Controllers\User;
 use App\Http\Controllers\ProductsService;
+use App\Http\Controllers\ClientService;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,7 @@ Route::post('/logar',[LoginService::class, 'checkPassword']);
 Route::get('/home',[SystemSales::class, 'show']);
 Route::get('/employee',[User::class, 'show']);
 Route::post('/employee/registration',[User::class, 'create']);
-Route::get('/products/registration',[ProductsService::class, 'show']);
+Route::get('/products',[ProductsService::class, 'show']);
 Route::post('/products/registration',[ProductsService::class, 'create']);
+Route::get('/client',[ClientService::class, 'show']);
+Route::post('/client/registration',[ClientService::class, 'create']);
