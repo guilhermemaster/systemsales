@@ -24,7 +24,7 @@ class User extends Controller
         } else {
             $status = false;
         } 
-        
-        return view('/home')->with('status', $status);
+        $salesProduct = true;
+        return view('/home')->with('status', $status)->with('salesProduct', $salesProduct);
     }
 }

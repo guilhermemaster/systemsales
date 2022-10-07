@@ -14,17 +14,22 @@
             </div>
         </div>
     </div> 
-    <p id="msg"> Cadastrado com Sucesso
-    </p>
 <script>      
-       $statusLocate = {{Js::from($status)}};
-       console.log($statusLocate);
+       homeLocate = {{Js::from($home)}};
+       statusLocate = {{Js::from($status)}};
+       statusSales = {{Js::from($salesProduct)}};
 
-       if($statusLocate){
-        document.getElementById('msg').style.display = 'inline';
+      if(!homeLocate){
+       if(statusLocate){
+        alert("Cadastrado com Sucesso");
        }else{
-        document.getElementById('msg').style.display = 'none';
-       }  
+        alert("Erro ao Cadastrar");
+            if(!statusSales){
+                alert("Quantidade de Produtos Insuficiente");
+            }        
+       }
+      }  
+        
 </script>
  
     

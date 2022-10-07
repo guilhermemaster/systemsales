@@ -7,6 +7,7 @@ use App\Http\Controllers\User;
 use App\Http\Controllers\ProductsService;
 use App\Http\Controllers\ClientService;
 use App\Http\Controllers\SalesService;
+use App\Http\Controllers\LogAppService;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,4 @@ Route::get('/client',[ClientService::class, 'show']);
 Route::post('/client/registration',[ClientService::class, 'create']);
 Route::get('/sales',[SalesService::class, 'show']);
 Route::post('/sales/registration',[SalesService::class, 'create']);
+Route::get('/log',[LogAppService::class, 'show']);

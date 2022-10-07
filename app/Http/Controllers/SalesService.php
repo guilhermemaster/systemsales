@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Sales;
 use App\Models\Login;
 use App\Models\Products;
-use App\Models\User;
+use App\Models\Client;
+use App\Http\Controllers\LogAppService;
 
 
 class SalesService extends Controller
@@ -17,14 +18,13 @@ class SalesService extends Controller
 
         $employee = Login::all();
         $products = Products::all();
-        $user = User::all();        
+        $clients = Client::all();        
      
-        return view('/sales')->with('employees', $employee)->with('products', $products)->with('users', $user);
+        return view('/sales')->with('employees', $employee)->with('products', $products)->with('clients', $clients);
     }   
     
     public function create(Request $request)
-    {
-        
+    {       
        
         $produtoAmounts = Products::where('id','=', $request->input('productOption'))->get();
         foreach ($produtoAmounts as $produtoAmount) {
@@ -32,28 +32,41 @@ class SalesService extends Controller
             $valueQueryId = $produtoAmount->id;
         }
 
+        $calculateAmount = $valueQueryAmount - intval($request->input('theAmount'));
         
-        // $company = Products::find($valueQueryId);
-        // $company->amount = 5;  
-        // $company->save();
-        // dd($company);
+        if ($calculateAmount >= 0 ){          
 
-        if ($valueQueryAmount >= $request->input('theAmount')){
+            $sales = new Sales();                
+            $sales->id_client = $request->input('clientOption');
+            $sales->id_login = $request->input('employeesOption');
+            $sales->id_products = $request->input('productOption');
+            $sales->amount = $request->input('theAmount');
             
+            if( $sales->save() ){
+                $logAppService = new LogAppService();
+                $logAppService->create($request->session()->get('loginUser'), 'Client: '.$request->input('clientOption').' - Products: '.$request->input('productOption').' - Amount: '.$request->input('theAmount'));                
 
-            $teste = $valueQueryAmount - intval($request->input('theAmount'));
-            dd($teste, $valueQueryAmount, intval($request->input('theAmount')));
-            if ($valueQueryAmount < 0 ) {
-                
-                dd($valueQueryAmoun);
-            // return view('/home')->with('status', $status);
+                $product = Products::find($valueQueryId);
+                $product->amount = $calculateAmount;  
+                $product->save();
+            } else {
+                $status = false;
+                $salesProduct = true;
+                $home = false;
+                return view('/home')->with('status', $status)->with('salesProduct', $salesProduct)->with('home', $home);
             }
 
-            $status = true;
-            return view('/home')->with('status', $status);
+            $status = true; 
+            $salesProduct = false;
+            $home = false;     
+            return view('/home')->with('status', $status)->with('salesProduct', $salesProduct)->with('home', $home);
+        
         }else{
+                 
             $status = false;
-            return view('/home')->with('status', $status);
+            $salesProduct = false;
+            $home = false;
+            return view('/home')->with('status', $status)->with('salesProduct', $salesProduct)->with('home', $home);
         }
         // $sales = new Sales(); 
          

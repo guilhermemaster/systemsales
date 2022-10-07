@@ -21,11 +21,14 @@
                 Menu
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/employee">Cadastrar Funcionario</a></li>
+                <li><a class="dropdown-item" href="home">Home</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/employee">Cadastrar Funcionário</a></li>
                 <li><a class="dropdown-item" href="/products">Cadastrar Produto</a></li>
                 <li><a class="dropdown-item" href="/client">Cadastrar Cliente</a></li>
                 <li><a class="dropdown-item" href="/sales">Vender</a></li>
                 <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/log">Log de Atividades</a></li>
                 <li><a class="dropdown-item" href="/login">Sair</a></li>                
               </ul>
             </li>             

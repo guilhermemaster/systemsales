@@ -8,7 +8,9 @@ class SystemSales extends Controller
 {
     public function show(Request $request)
     {   
-        $status = false;      
-        return view('/home')->with('status', $status);
+        $status = false; 
+        $salesProduct = false;
+        $home = true;     
+        return view('/home')->with('status', $status)->with('salesProduct', $salesProduct)->with('home', $home);
     }   
 }

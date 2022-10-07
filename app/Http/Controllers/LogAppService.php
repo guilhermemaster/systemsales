@@ -7,6 +7,14 @@ use App\Models\LogApp;
 
 class LogAppService extends Controller
 {
+    
+    public function show()
+    {        
+        $logs = LogApp::All();
+        // dd($log);
+        return view('/logapp')->with('logs', $logs);
+    }
+    
     public function create($login, $descriptionExternal)
     {        
         $log = new LogApp();

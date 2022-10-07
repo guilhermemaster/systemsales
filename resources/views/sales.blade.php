@@ -8,10 +8,10 @@
                   @csrf
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Name User</label>
-                    <select class="form-select" aria-label="Default select example" name="userOption">
+                    <select class="form-select" aria-label="Default select example" name="clientOption">
                         <option selected>Select</option>            
-                        @foreach ($users as $user)             
-                         <option value="{{ $user->id }}">{{ $user->nome }}</option>
+                        @foreach ($clients as $client)             
+                         <option value="{{ $client->id }}">{{ $client->nome }}</option>
                         @endforeach  
                     </select> 
                   </div>

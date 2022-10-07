@@ -21,9 +21,11 @@ class LoginService extends Controller
     public function checkPassword(Request $request)
     {        
         $nome = $request->input('nome');
-        $senha = $request->input('password');        
+        $senha = $request->input('password');  
+        
+        //$produtoAmounts = Products::where('id','=', $request->input('productOption'))->get();
 
-        $series = Login::where('nome','=', 'guilherme@gmail.com')->get();
+        $series = Login::where('nome','=', $request->input('nome'))->get();
         $request->session()->put('loginUser', $nome);
         foreach ($series as $pp) {
             $pass=$pp->senha;
