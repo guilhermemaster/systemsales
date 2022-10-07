@@ -8,8 +8,7 @@ class SystemSales extends Controller
 {
     public function show(Request $request)
     {   
-        $status = false;
-        // dd($request->session()->get('loginUser'));
+        $status = false;      
         return view('/home')->with('status', $status);
     }   
 }

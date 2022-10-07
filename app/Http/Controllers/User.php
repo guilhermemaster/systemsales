@@ -23,8 +23,7 @@ class User extends Controller
             $status = true;
         } else {
             $status = false;
-        }     
-       
+        } 
         
         return view('/home')->with('status', $status);
     }

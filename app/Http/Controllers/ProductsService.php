@@ -11,7 +11,7 @@ class ProductsService extends Controller
     public function show(Request $request)
     {   
         $status = false;
-        // dd($request->session()->get('loginUser'));
+
         return view('/createproducts');
     } 
 
