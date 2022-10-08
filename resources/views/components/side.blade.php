@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }}</title>
     @vite(['resources/js/app.js'])  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         
 </head>
 <body>
@@ -27,6 +28,9 @@
                 <li><a class="dropdown-item" href="/products">Cadastrar Produto</a></li>
                 <li><a class="dropdown-item" href="/client">Cadastrar Cliente</a></li>
                 <li><a class="dropdown-item" href="/sales">Vender</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/reportclient">Relatório Vendas Por Clientes</a></li>
+                <li><a class="dropdown-item" href="/reportemployee">Relatório Vendas Por Funcionário</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="/log">Log de Atividades</a></li>
                 <li><a class="dropdown-item" href="/login">Sair</a></li>                
