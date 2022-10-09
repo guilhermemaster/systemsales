@@ -64,3 +64,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Run Project
+
+Install:
+PHP 8.0.0
+composer
+sudo apt install php8.0 php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd
+sudo apt-get install php-xml
+sudo apt-get install php-sqlite3
+sudo apt-get install php-pgsql
+
