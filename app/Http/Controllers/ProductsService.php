@@ -9,9 +9,7 @@ use App\Http\Controllers\LogAppService;
 class ProductsService extends Controller
 {
     public function show(Request $request)
-    {   
-        $status = false;
-
+    {        
         return view('/createproducts');
     } 
 
@@ -31,6 +29,8 @@ class ProductsService extends Controller
             $status = false;
         } 
         
-        return view('/home')->with('status', $status);
+        $home = false;        
+        $salesProduct = false;
+        return view('/home')->with('status', $status)->with('salesProduct', $salesProduct)->with('home', $home);
     }
 }

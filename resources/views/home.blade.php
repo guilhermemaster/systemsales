@@ -1,5 +1,4 @@
-<x-side title="Portifolio Guilherme Barbosa Lima">
-
+<x-side title="Sistema de Vendas">
 
     <div class="container text-center">  
         <div class="row">          
@@ -14,24 +13,22 @@
             </div>
         </div>
     </div> 
-<script>      
-       homeLocate = {{Js::from($home)}};
-       statusLocate = {{Js::from($status)}};
-       statusSales = {{Js::from($salesProduct)}};
+    <script>      
+        homeLocate = {{Js::from($home)}};
+        statusLocate = {{Js::from($status)}};
+        statusSales = {{Js::from($salesProduct)}};
 
-      if(!homeLocate){
-       if(statusLocate){
-        alert("Cadastrado com Sucesso");
-       }else{
-        alert("Erro ao Cadastrar");
-            if(!statusSales){
-                alert("Quantidade de Produtos Insuficiente");
-            }        
-       }
-      }  
-        
-</script>
- 
+        if(!homeLocate){
+        if(statusLocate){
+            alert("Cadastrado com Sucesso");
+        }else{
+            alert("Erro ao Cadastrar");
+                if(!statusSales){
+                    alert("Quantidade de Produtos Insuficiente");
+                }        
+        }
+        }          
+    </script>
     
 </x-side>
     

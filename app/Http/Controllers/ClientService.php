@@ -9,7 +9,6 @@ class ClientService extends Controller
 {
     public function show(Request $request)
     {   
-        $status = false;
         return view('/createclient');
     } 
 
@@ -32,7 +31,9 @@ class ClientService extends Controller
             $status = false;
         } 
         
-        $salesProduct = true;
-        return view('/home')->with('status', $status)->with('salesProduct', $salesProduct);
+        $home = true;
+        $status = false;
+        $salesProduct = false;
+        return view('/home')->with('status', $status)->with('salesProduct', $salesProduct)->with('home', $home);
     }
 }

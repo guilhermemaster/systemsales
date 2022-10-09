@@ -9,30 +9,21 @@ class LoginService extends Controller
 {
     public function index(Request $request)
     {
-        $series = [
-            'Punisher',
-            'Lost',
-            'Grey\'s Anatomy',
-        ];
-
-        return view('index')->with('series', $series);
+        return view('index');
     }
 
     public function checkPassword(Request $request)
     {        
-        $nome = $request->input('nome');
-        $senha = $request->input('password');  
-        
-        //$produtoAmounts = Products::where('id','=', $request->input('productOption'))->get();
+        $name = $request->input('name');
+        $password = $request->input('password');      
 
-        $series = Login::where('nome','=', $request->input('nome'))->get();
-        $request->session()->put('loginUser', $nome);
-        foreach ($series as $pp) {
-            $pass=$pp->senha;
+        $logins = Login::where('nome','=', $request->input('name'))->get();
+        $request->session()->put('loginUser', $name);
+        foreach ($logins as $login) {
+            $passHash=$login->senha;
         }       
-       
-        $login = new Login();
-        if ($login->hashPassword($senha) == $pass) {
+
+        if ($login->hashPassword($password) == $passHash) {
             return redirect('/home');
         }else{
             return redirect('/login');

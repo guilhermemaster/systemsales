@@ -1,4 +1,4 @@
-<x-side title="Portifolio Guilherme Barbosa Lima">
+<x-side title="Sistema de Vendas">
 
   <h1>Registration Employee</h1>
       <div class="container">
@@ -8,7 +8,7 @@
                   @csrf
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="text" class="form-control" name="nome" id="exampleInputEmail1" aria-describedby="emailHelp">   
+                    <input type="email" class="form-control" name="name">   
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>

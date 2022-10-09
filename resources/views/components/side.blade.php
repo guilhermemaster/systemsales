@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }}</title>
     @vite(['resources/js/app.js'])  
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>        
 </head>
 <body>
   
@@ -22,18 +21,19 @@
                 Menu
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="home">Home</a></li>
+                <li><a class="dropdown-item" href="home"><img src="https://img.icons8.com/material-outlined/48/000000/home--v4.png"/>Home</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/employee">Cadastrar Funcionário</a></li>
-                <li><a class="dropdown-item" href="/products">Cadastrar Produto</a></li>
-                <li><a class="dropdown-item" href="/client">Cadastrar Cliente</a></li>
-                <li><a class="dropdown-item" href="/sales">Vender</a></li>
+                <li><a class="dropdown-item" href="/employee"><img src="https://img.icons8.com/ios/50/000000/men-age-group-5.png"/>Cadastrar Funcionário</a></li>
+                <li><a class="dropdown-item" href="/products">
+                  <img src="https://img.icons8.com/external-wanicon-lineal-wanicon/64/000000/external-product-advertising-wanicon-lineal-wanicon.png"/>Cadastrar Produto</a></li>
+                <li><a class="dropdown-item" href="/client"><img src="https://img.icons8.com/ios/50/000000/client-management.png"/>Cadastrar Cliente</a></li>
+                <li><a class="dropdown-item" href="/sales"><img src="https://img.icons8.com/ios/50/000000/sell.png"/>Vender</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/reportclient">Relatório Vendas Por Clientes</a></li>
-                <li><a class="dropdown-item" href="/reportemployee">Relatório Vendas Por Funcionário</a></li>
+                <li><a class="dropdown-item" href="/reportclient"><img src="https://img.icons8.com/dotty/45/000000/report-file.png"/>Relatório Vendas Por Clientes</a></li>
+                <li><a class="dropdown-item" href="/reportemployee"><img src="https://img.icons8.com/dotty/45/000000/report-file.png"/>Relatório Vendas Por Funcionário</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/log">Log de Atividades</a></li>
-                <li><a class="dropdown-item" href="/login">Sair</a></li>                
+                <li><a class="dropdown-item" href="/log"><img src="https://img.icons8.com/ios/50/000000/log.png"/>Log de Atividades</a></li>
+                <li><a class="dropdown-item" href="/login"><img src="https://img.icons8.com/material-outlined/48/000000/emergency-exit.png"/>Sair</a></li>                
               </ul>
             </li>             
           </ul>         

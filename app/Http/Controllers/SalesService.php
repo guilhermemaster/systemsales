@@ -67,24 +67,6 @@ class SalesService extends Controller
             $salesProduct = false;
             $home = false;
             return view('/home')->with('status', $status)->with('salesProduct', $salesProduct)->with('home', $home);
-        }
-        // $sales = new Sales(); 
-         
-        // $sales->id_client = $request->input('userOption');
-        // $sales->id_login =  $request->input('employeesOption');  
-        // $sales->id_products =  $request->input('productOption');
-        // $sales->amount =  $request->input('amount');
-        
-        // $sales->save();
-       
-        // if( $products->save() ){
-        //     $status = true;
-        //     $logAppService = new LogAppService();
-        //     $logAppService->create($request->session()->get('loginUser'), 'Fruit: '.$nome.' - Amount: '.$product);
-        // } else {
-        //     $status = false;
-        // } 
-        
-        // return view('/home')->with('status', $status);
+        } 
     }
 }

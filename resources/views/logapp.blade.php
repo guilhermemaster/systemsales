@@ -1,4 +1,4 @@
-<x-side title="Portifolio Guilherme Barbosa Lima">
+<x-side title="Sistema de Vendas">
 
     <div class="container">
         <div class="jumbotron">

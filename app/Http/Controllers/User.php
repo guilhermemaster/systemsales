@@ -16,15 +16,18 @@ class User extends Controller
     public function create(Request $request)
     {
         $login = new Login(); 
-        $nome = $request->input('nome');        
-        $login->nome = $nome;
+        $name = $request->input('name');        
+        $login->nome = $name;
         $login->senha = $login->hashPassword($request->input('password'));
+
         if( $login->save() ){
             $status = true;
         } else {
             $status = false;
         } 
-        $salesProduct = true;
-        return view('/home')->with('status', $status)->with('salesProduct', $salesProduct);
+
+        $home = false;        
+        $salesProduct = false;
+        return view('/home')->with('status', $status)->with('salesProduct', $salesProduct)->with('home', $home);
     }
 }
