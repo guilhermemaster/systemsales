@@ -1,4 +1,4 @@
-<x-side title="Portifolio Guilherme Barbosa Lima">
+<x-side title="Sistemas de Vendas">
 
     <h1>Registration Sales</h1>
       <div class="container">
